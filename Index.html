@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gravity of Letters</title>
+</head>
+<header>
+    <p>Gravity Forms</p>
+</header>
+<body>
+    <!-- IMAGE TO DISPLAY -->
+    <img id="displayedImage" src="" alt="Displayed Image">
+
+    <!-- INPUT FIELD FOR 1 CHARACTER -->
+    <input type="text" id="charInput" maxlength="1" placeholder="A⎻Z" onkeypress="if(event.key === 'Enter') displayImage()">  
+
+    <!-- BUTTON TO DISPLAY IMAGE -->
+    <button onclick="displayImage()" id="submitButton">Show Gif</button>
+
+    <!-- Image Display Script Below -->
+    <script>
+        // Array of images
+        // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
+        const images = [
+            "gifs/A.gif", // A
+            "gifs/B.gif", // B
+            "gifs/C.gif", // C
+            "gifs/D.gif", // D
+            "gifs/E.gif", // E
+            "gifs/F.gif", // F
+            "gifs/G.gif", // G
+            "gifs/H.gif", // H
+            "gifs/I.gif", // I
+            "gifs/J.gif", // J
+            "gifs/K.gif", // K
+            "gifs/L.gif", // L
+            "gifs/M.gif", // M
+            "gifs/N.gif", // N
+            "gifs/O.gif", // O
+            "gifs/P.gif", // P
+            "gifs/Q.gif", // Q
+            "gifs/R.gif", // R
+            "gifs/S.gif", // S
+            "gifs/T.gif", // T
+            "gifs/U.gif", // U
+            "gifs/V.gif", // V
+            "gifs/W.gif", // W
+            "gifs/X.gif", // X
+            "gifs/Y.gif", // Y
+            "gifs/Z.gif"  // Z
+        ];
+
+        function displayImage() {
+            const input = document.getElementById("charInput").value.toUpperCase();
+            const imgElement = document.getElementById("displayedImage");
+            
+            // Assign an image based on character (A-Z)
+            const index = input.charCodeAt(0) - 65; // 'A' is 65 in ASCII
+            if (index >= 0 && index < images.length) {
+                imgElement.src = images[index];
+                imgElement.style.display = "block";
+            } else {
+                /* 
+                alert("Please enter a letter between A and Z.");
+                imgElement.style.display = "none";
+                */
+
+                // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
+                imgElement.src = "gifs/retry.gif"
+                imgElement.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

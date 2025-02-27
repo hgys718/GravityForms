@@ -1,0 +1,127 @@
+@font-face {
+
+    font-family: 'sf-pro-display';
+    src: url('fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf-pro-display'; 
+    src: url('fonts/SF-Pro-Display-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf-pro-display';
+    src: url('fonts/SF-Pro-Display-Medium.otf') format('opentype'); 
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf-pro-display';
+    src: url('fonts/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 20px;
+    padding: 20px;
+    background-color: #0d0d0d;
+    font-family: sf-pro-display, sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+header {
+    width: 100vw;
+    letter-spacing: -0.5vw;
+    font-size: 20vw;
+    font-weight: 300;
+    text-align: center;
+    position: fixed;
+    z-index: -1;
+    background: linear-gradient(135deg, #ffffff, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+#displayedImage {
+    display: none; 
+    margin-bottom: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 30px;
+    filter: grayscale(100%);
+}
+
+#charInput {
+    padding: 12px;
+    font-size: 17px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 60px;
+    background-color: #1c1c1e;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+#charInput:focus {
+    outline: none;
+    border-color: #ffffff;
+    background-color: #2c2c2e;
+}
+
+#submitButton:hover {
+    transform: scale(1.02);
+}
+
+#submitButton:active {
+    transform: scale(0.98);
+}
+
+#submitButton {
+    padding: 12px 24px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background: linear-gradient(135deg, 
+        #c8c8c8,  
+        #8c8c8c  
+    );
+}
+
+#submitButton:hover {
+    transform: scale(1.02);
+}
+
+#submitButton:active {
+    transform: scale(0.98);
+}
+
+
+#charInput {
+    margin: 30px auto;
+    display: block;
+}
