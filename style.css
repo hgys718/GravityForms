@@ -69,9 +69,11 @@ header {
     border-radius: 10px;
     margin: 30px;
     filter: grayscale(100%);
+    opacity: 0.95;
 }
 
 #charInput {
+    opacity: 0.9;
     padding: 12px;
     font-size: 17px;
     border: 1px solid #333333;
